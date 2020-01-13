@@ -10,7 +10,7 @@ NCDから自分の経験症例を抽出するためのスクリプトです。�
 * 手術は20件ずつ表示されて、それ以上の設定はできない
 * もちろん`.csv`での一括ダウンロードなんてもっての他
 
-という仕様になっていました。さすがに手間がかかりすぎるので、Sleniumでscrapingすることにしました。Seleniumとは一言で言ってしまえば、自動でブラウザを操作する為のライブラリということです。
+という仕様になっていました。さすがに手間がかかりすぎるので、Sleniumでscrapingすることにしました。Seleniumとは一言で言ってしまえば、自動でブラウザを操作する為のライブラリとのことです。
 
 # Requirement
 * macOS Mojave+: 他のOSには対応できていません
@@ -19,16 +19,16 @@ NCDから自分の経験症例を抽出するためのスクリプトです。�
 * Selenium
 * ChromeDriver
 
-セットアップについては拙ブログ[ (Note of Pediatric Surgey) ](https://www.pediatricsurgery.site/)の[SeleniumとPythonでスクレイピングをやるために必要な準備](https://www.pediatricsurgery.site/entry/2019/12/15/143053)という記事にまとめてあります。
+セットアップについては拙ブログ[ (Note of Pediatric Surgey) ](https://www.pediatricsurgery.site/)の[SeleniumとPythonでスクレイピングをやるために必要な準備](https://www.pediatricsurgery.site/entry/2019/12/15/143053)という記事にまとめてありますので、こちらを参照にしてください。
 
 # Usage
-スクリプトを自身で変更する必要があるのは3つです。
+`NCDscraper.py`のスクリプトの中で、自身で変更する必要があるのは3つです。
 
 1. '自身のログインIDを入力'
 2. '自身のパスワードを入力'
 3. 'ページ数-1を入力'
 
-それぞれ該当する値に変更してください。'ページ数-1'とは、例えば110件手術があるならば、110[件] / 20[件/ページ] = 5[ページ]で1を引いて`4`と入力してください。
+それぞれ該当する値に変更してください。'ページ数-1'とは、例えば110件手術があるならば、110[件] / 20[件/ページ] = 5[ページ]で1を引いて`4`とします。これらを変更したあと、Python3をターミナルを起動し、スクリプトをすべて貼り付けて実行すれば、Chromeが起動し、自動処理したあと、デスクトップにCSVファイルが吐き出されていると思います。
 
 # Recommendation
 スクリプトの内容の解説は拙ブログ [(Note of Pediatric Surgey)](https://www.pediatricsurgery.site/) の[SeleniumでNCD検索システムから全経験手術症例を1つのCSVファイルに抽出する](https://www.pediatricsurgery.site/entry/2019/12/15/143053)にまとめてありますので、もしよろしければご参照ください。
